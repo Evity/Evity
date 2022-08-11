@@ -1,15 +1,7 @@
 <h1 align='left'> Hi! I'm Evity. :wave:</h1>
-<p align='left'>
-<br>
 
-<h3 align="left">
-  Computer Engineer & Go Developer from China, I'm in love with music
-</h3>
-
+![](assets/hal.png)
 <h1 align='left'><i>Listening :musical_note:</i></h1>
-
-
-
 <details align="left">
 <summary>Progress bar</summary>
 
