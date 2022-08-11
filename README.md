@@ -9,8 +9,8 @@
 </p>
 
 
-<h1 align='center'><i>Listening :music:</i></h1>
-------
+<h1 align='center'><i>Listening :musical_note:</i></h1>
+
 
 
 
@@ -18,9 +18,12 @@
   <a href="https://evity.vercel.app/now-playing?open">
   <img src="https://evity.vercel.app/now-playing" width="800" height="125">
 </p>
-<details open>  
+
+
+
+<details open>
+<summary>
 
   [![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=31sjxvwfp73t7imhsjrzmlq2ytdq&cover_image=true&theme=default&bar_color_cover=false)](https://spotify-github-profile.vercel.app/api/view?uid=31sjxvwfp73t7imhsjrzmlq2ytdq&redirect=true)
-    
+</summary>
 </details>
-
