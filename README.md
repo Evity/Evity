@@ -1,39 +1,23 @@
-# Hey, I'm Nate!
+<table width="100%"> 
+  <tr>
+  <td width="50%">
+&nbsp; <br>
 
-<a href="https://github.com/sponsors/natemoo-re" title="Sponsor Nate Moore"><img src="/assets/sponsor.svg?sanitize=true" width="94" height="28" aria-hidden="true"></a>
+<a href="https://evity.vercel.app/now-playing?open">
+        <img src="https://evity.vercel.app/now-playing" width="540" height="64">
+    </a>
 
-### I'm a co-creator and core maintainer of [Astro  🚀](https://github.com/snowpackjs/astro). You should [try it now](https://astro.new), in your browser!
+  </td>
+  <td width="50%">
 
-Recently, I was the architect of Astro's [WASM-powered compiler](https://github.com/snowpackjs/astro-compiler-next) written in Go ✨. This whole journey began with a SSG I created called [Microsite](https://github.com/natemoo-re/microsite) 🤏. Before that, I was really into writing utility web components like [`animate-presence`](https://github.com/natemoo-re/animate-presence) and [`konami-listener`](https://github.com/natemoo-re/konami-listener).
+&nbsp;<p align="center">This repository is [unlicense](https://choosealicense.com/licenses/unlicense/)[d], feel free to fork!<br><br>
+[![Linkedin](https://img.shields.io/badge/linked-in-369?style=flat-square&logo=linkedin&logoColor=white&color=blue)](https://www.linkedin.com/in/andrew-novac)
+[![E-Mail](https://img.shields.io/badge/email-reveal-2a8?style=flat-square&logo=gmail&logoColor=white)](https://mail.novac.dev/)
+[![Visits](https://komarev.com/ghpvc/?username=novatorem&logo=GitHub&label=github%20visits&color=336699&logoColor=white&style=flat-square)](https://github.com/novatorem)
 
-As a former Graphic Designer, I'll always have a soft spot for design. The space between development and design is where I thrive.
-
-> If you're interested in the work I do, please consider sponsoring me on GitHub!
-
----
-
-| 🎵 Now Playing                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ |
-| <a href="https://evity.vercel.app/now-playing?open"><img src="https://evity.vercel.app/now-playing" width="540" height="64"></a> |
-
-
-<table>
-  <thead>
-    <tr>
-      <th>📈 Top Tracks</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://evity.vercel.app/top-tracks?i=1&open"><img src="https://evity.vercel.app/top-tracks?i=1" width="540" height="64"></a></td>
-    </tr>
-    <tr></tr> <!-- hide gray row -->
-    <tr>
-      <td><a href="https:/evity.vercel.app/top-tracks?i=2&open"><img src="https://evity.vercel.app/top-tracks?i=2" width="540" height="64"></a></td>
-    </tr>
-    <tr></tr> <!-- hide gray row -->
-    <tr>
-      <td><a href="https://evity.vercel.app/top-tracks?i=3&open"><img src="https://evity.vercel.app/top-tracks?i=3" width="540" height="64"></a></td>
-    </tr>
-  </tbody>
+  </p>
+  </td>
 </table>
+
+|      |
+| ---- |
