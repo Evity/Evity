@@ -13,3 +13,4 @@
 
 
   [![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=31sjxvwfp73t7imhsjrzmlq2ytdq&cover_image=true&theme=default&bar_color_cover=false)](https://spotify-github-profile.vercel.app/api/view?uid=31sjxvwfp73t7imhsjrzmlq2ytdq&redirect=true)
+![](https://visitor-badge.glitch.me/badge?page_id=evity.evity)
