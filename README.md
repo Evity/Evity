@@ -1,6 +1,20 @@
-<h1 align='left'> Hi! I'm Evity. :wave:</h1>
+<h1 align='center'> Hi! I'm Evity. :wave:</h1>
 
 ![](assets/hal.png)
+
+> Developer of 💻⎈🐳 **Distributed Infrastructure / Kubernetes** ☁️**Cloud Native**
+
+### About me
+
+* 👑 Pronouns **[i:viti]**
+* 🧐   Interested in 💻 **GNU/Linux**. Recent focus on Infra.
+* 🌱   Currently learning Linux, Rust/C.
+* 📚   Reading 《Systems Performance 2nd Ed.》《BPF Performance Tools book》.
+**⎈   Encouraging people for open source collaborations.**
+
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Evity&theme=github)
+![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Evity&theme=github)
+![](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Evity&theme=github)
 <h1 align='left'><i>Listening :musical_note:</i></h1>
 <details align="left">
 <summary>Progress bar</summary>
