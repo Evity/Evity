@@ -10,6 +10,7 @@
 * 🧐   Interested in 💻 **GNU/Linux**. Recent focus on Infra.
 * 🌱   Currently learning Linux, Rust/C.
 * 📚   Reading 《Systems Performance 2nd Ed.》《BPF Performance Tools book》.
+* ⏰   [Time waits for no one](https://Evity.github.io/)
 
 **⎈   Encouraging people for open source collaborations.**
 
