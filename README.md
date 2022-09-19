@@ -9,7 +9,7 @@
 * 👑 Pronouns **[i:viti]**
 * 🧐   Interested in 💻 **GNU/Linux**, 🐳**Docker**. Recent focus on ⎈**Kubernetes** .
 * 🌱   Currently learning Linux, Rust/C.
-* 📚   Reading 《Systems Performance 2nd Ed.》《BPF Performance Tools book》.
+* 📚   Reading 《Mit6.824 Distributed  System》《BPF Performance Tools book》.
 * ⏰   [Time waits for no one](https://Evity.github.io/)
 
 **⎈   Encouraging people for open source collaborations.**
