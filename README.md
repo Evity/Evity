@@ -2,12 +2,12 @@
 
 ![](assets/hal.png)
 
-> Developer of 💻⎈🐳 **Distributed Infrastructure / Kubernetes** ☁️**Cloud Native**
+> Developer of **Distributed Infrastructure** ☁️ **Cloud Native**
 
 ### About me
 
 * 👑 Pronouns **[i:viti]**
-* 🧐   Interested in 💻 **GNU/Linux**. Recent focus on Infra.
+* 🧐   Interested in 💻 **GNU/Linux**. Recent focus on ⎈**Kubernetes**🐳 .
 * 🌱   Currently learning Linux, Rust/C.
 * 📚   Reading 《Systems Performance 2nd Ed.》《BPF Performance Tools book》.
 * ⏰   [Time waits for no one](https://Evity.github.io/)
