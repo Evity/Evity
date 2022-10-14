@@ -8,7 +8,7 @@
 
 * 👑 Pronouns **[i:viti]**
 * 🧐   Interested in 💻 **GNU/Linux**, 🐳**Docker**. Recent focus on ⎈**Kubernetes** .
-* 🌱   Currently learning Linux, Java.
+* 🌱   Currently learning Linux.
 * 📚   Reading 《Mit6.824 Distributed  System》《BPF Performance Tools book》.
 * ⏰   [Time waits for no one](https://Evity.github.io/)
 
