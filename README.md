@@ -2,17 +2,11 @@
 
 ![](assets/hal.png)
 
-> Developer of ⭐**Distributed Infrastructure** ☁️ **Cloud Native**
+> Developer of 🐳**Golang**
 
 ### About me
-
 * 👑 Pronouns **[i:viti]**
-* 🧐   Interested in 💻 **GNU/Linux**, 🐳**Docker**. Recent focus on ⎈**Kubernetes** .
-* 🌱   Currently learning Linux.
-* 📚   Reading 《Mit6.824 Distributed  System》《BPF Performance Tools book》.
 * ⏰   [Time waits for no one](https://Evity.github.io/)
-
-**⎈   Encouraging people for open source collaborations.**
 
 
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Evity&theme=github)
