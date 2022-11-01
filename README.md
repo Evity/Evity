@@ -6,7 +6,7 @@
 
 ### About me
 * 👑 Pronouns **[i:viti]**
-* ⏰   [Time waits for no one](https://Evity.github.io/)
+* ⏰   [Time waits for no one](https://Evity.github.io/NixieClock/)
 
 
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Evity&theme=github)
