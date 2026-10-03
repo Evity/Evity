@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="280" viewBox="0 0 840 280" role="img" aria-labelledby="title">
+<title id="title">Evity · Go developer</title>
+<defs><radialGradient id="light"><stop stop-color="#163d3a"/><stop offset="1" stop-color="#0d1117"/></radialGradient>
+<linearGradient id="rim" x2="1" y2="1"><stop stop-color="#b6f2e9"/><stop offset=".5" stop-color="#79ddd2"/><stop offset="1" stop-color="#163d3a"/></linearGradient></defs>
+<rect x=".5" y=".5" width="839" height="279" rx="16" fill="#0d1117" stroke="#30363d"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif"><g transform="translate(676 132)" opacity="1">
+<circle r="124" fill="url(#light)"/>
+<g fill="none" stroke="#30363d"><ellipse rx="144" ry="58" transform="rotate(-32)"/><ellipse rx="144" ry="58" transform="rotate(32)"/><circle r="94" stroke-dasharray="2 10"/></g>
+<ellipse rx="144" ry="58" transform="rotate(-32)" fill="none" stroke="url(#rim)" stroke-width="2"/>
+<rect x="-48" y="-48" width="96" height="96" rx="24" fill="#161b22" stroke="url(#rim)" transform="rotate(-12)"/>
+<text x="0" y="24" text-anchor="middle" font-size="80" font-weight="700" fill="#79ddd2">e</text>
+<circle cx="120" cy="-66" r="5" fill="#b6f2e9"/></g>
+<text x="32" y="48" text-anchor="start" fill="#79ddd2" font-size="16" font-weight="600">EVITY / PERSONAL LOG</text>
+<text x="28" y="144" text-anchor="start" fill="#f0f6fc" font-size="80" font-weight="700">evity.</text>
+<text x="32" y="188" text-anchor="start" fill="#f0f6fc" font-size="24" font-weight="500">Go developer.</text>
+<path d="M32 232H808" stroke="#30363d"/><text x="32" y="260" text-anchor="start" fill="#a9b6c7" font-size="16" font-weight="400">[i:viti]  ·  code &amp; play</text></g></svg>

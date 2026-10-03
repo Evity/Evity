@@ -3,6 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "description": "Github profile",
+  "scripts": {
+    "profile:update": "node scripts/update-profile.mjs",
+    "profile:check": "node scripts/update-profile.mjs --check"
+  },
   "main": "index.js",
   "dependencies": {
     "faunadb": "^2.14.2",
