@@ -34,7 +34,7 @@ Steam 游戏记录 · 最近两周的游玩时光。
 <details>
 <summary>数据详情 · 最近更新的项目与游戏记录</summary>
 
-GitHub 快照：2026-10-17 20:33:34 UTC。
+GitHub 快照：2026-10-18 03:54:13 UTC。
 
 - 公开仓库：**9**
 - 关注者：**6**
@@ -48,9 +48,15 @@ GitHub 快照：2026-10-17 20:33:34 UTC。
 - [dotfiles](https://github.com/Evity/dotfiles) · Lua · 0 stars · 2026-06-06
 - [GList](https://github.com/Evity/GList) · Go · 0 stars · 2026-04-03
 
-Steam 尚未接入。
+Steam 最近两周：**26.3 h**。
 
-接入后展示两周游戏时长。
+汇总全部近期游戏。以下列出时长前三名：
+
+- Street Fighter™ 6 · 两周 9.3 h · 累计 217.1 h
+- Dead by Daylight · 两周 4.6 h · 累计 619.7 h
+- Lossless Scaling · 两周 4.2 h · 累计 10.2 h
+
+[Steam 个人主页](https://steamcommunity.com/profiles/76561198135905684) · 快照：2026-10-18 03:54:13 UTC。
 
 数据每 6 小时刷新；属于定时快照。
 
