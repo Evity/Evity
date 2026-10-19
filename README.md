@@ -34,7 +34,7 @@ Steam 游戏记录 · 最近两周的游玩时光。
 <details>
 <summary>数据详情 · 最近更新的项目与游戏记录</summary>
 
-GitHub 快照：2026-10-18 20:38:14 UTC。
+GitHub 快照：2026-10-19 04:35:41 UTC。
 
 - 公开仓库：**9**
 - 关注者：**6**
@@ -56,7 +56,7 @@ Steam 最近两周：**36.6 h**。
 - The Witcher 3: Wild Hunt — Remastered · 两周 10.4 h · 累计 156.9 h
 - Dead by Daylight · 两周 4.9 h · 累计 620.0 h
 
-[Steam 个人主页](https://steamcommunity.com/profiles/76561198135905684) · 快照：2026-10-18 20:38:13 UTC。
+[Steam 个人主页](https://steamcommunity.com/profiles/76561198135905684) · 快照：2026-10-19 04:35:40 UTC。
 
 数据每 6 小时刷新；属于定时快照。
 
