@@ -23,13 +23,16 @@ const label = (x, y, value, color = palette.muted, size = 16, weight = 400, anch
   `<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${color}" font-size="${size}" font-weight="${weight}">${escapeXml(value)}</text>`;
 const rule = (y, width) => `<path d="M32 ${y}H${width - 32}" stroke="${palette.border}"/>`;
 
-function frame(width, height, title, content) {
+function canvas(width, height, title, content) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title">
 <title id="title">${escapeXml(title)}</title>
 <defs><radialGradient id="light"><stop stop-color="${palette.deep}"/><stop offset="1" stop-color="${palette.background}"/></radialGradient>
-<linearGradient id="rim" x2="1" y2="1"><stop stop-color="${palette.soft}"/><stop offset=".5" stop-color="${palette.accent}"/><stop offset="1" stop-color="${palette.deep}"/></linearGradient></defs>
-<rect x=".5" y=".5" width="${width - 1}" height="${height - 1}" rx="16" fill="${palette.background}" stroke="${palette.border}"/>
-<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">${content}</g></svg>\n`;
+<linearGradient id="rim" x2="1" y2="1"><stop stop-color="${palette.soft}"/><stop offset=".5" stop-color="${palette.accent}"/><stop offset="1" stop-color="${palette.deep}"/></linearGradient></defs>${content}</svg>\n`;
+}
+
+function frame(width, height, title, content) {
+  return canvas(width, height, title, `<rect x=".5" y=".5" width="${width - 1}" height="${height - 1}" rx="16" fill="${palette.background}" stroke="${palette.border}"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">${content}</g>`);
 }
 
 export function renderHero(mobile = false) {
@@ -42,10 +45,10 @@ export function renderHero(mobile = false) {
 <text x="0" y="24" text-anchor="middle" font-size="80" font-weight="700" fill="${palette.accent}">e</text>
 <circle cx="120" cy="-66" r="5" fill="${palette.soft}"/></g>`;
   return frame(width, 280, 'Evity · Go developer', `${orbit}
-${label(32, 48, 'EVITY / PERSONAL LOG', palette.accent, 16, 600)}
+${label(32, 48, 'github.com/Evity', palette.accent, 16, 600)}
 ${label(28, 144, 'evity.', palette.text, 80, 700)}
 ${label(32, 188, 'Go developer.', palette.text, 24, 500)}
-${rule(232, width)}${label(32, 260, '[i:viti]  ·  code & play', palette.muted)}`);
+${rule(232, width)}${label(32, 260, '[i:viti]', palette.muted)}`);
 }
 
 function metric(x, y, value, caption) {
@@ -57,9 +60,9 @@ export function renderGithub(data, mobile = false) {
   const height = mobile ? 528 : 448;
   const metrics = mobile
     ? metric(32, 124, data.publicRepos, 'Public repos') + metric(220, 124, data.followers, 'Followers')
-      + metric(32, 208, data.stars, 'Original-repo stars')
+      + metric(32, 208, data.stars, 'Stars (non-fork)')
     : metric(32, 124, data.publicRepos, 'Public repos') + metric(292, 124, data.followers, 'Followers')
-      + metric(552, 124, data.stars, 'Original-repo stars');
+      + metric(552, 124, data.stars, 'Stars (non-fork)');
   const divider = mobile ? 256 : 176;
   const rows = data.recentRepos.map((repo, index) => {
     const y = divider + 76 + index * 60;
@@ -67,19 +70,19 @@ export function renderGithub(data, mobile = false) {
       + label(32, y + 24, `${clip(repo.language || 'Repository', mobile ? 14 : 28)}  ·  ${number(repo.stars)} stars  ·  ${date(repo.pushedAt)}`);
   }).join('') || label(32, divider + 76, 'No public repository updates available.');
   return frame(width, height, 'GitHub public profile and recently pushed repositories',
-    label(32, 44, 'The public log', palette.text, 24, 600) + metrics + rule(divider, width)
-    + label(32, divider + 32, 'RECENT REPOSITORY UPDATES', palette.accent, 16, 600)
+    label(32, 44, 'GitHub', palette.text, 24, 600) + metrics + rule(divider, width)
+    + label(32, divider + 32, 'RECENT UPDATES', palette.accent, 16, 600)
     + `<defs><clipPath id="rows"><rect x="32" y="${divider + 48}" width="${width - 64}" height="${height - divider - 76}"/></clipPath></defs><g clip-path="url(#rows)">${rows}</g>`
-    + label(32, height - 20, `Snapshot · ${date(data.updatedAt)} UTC`, palette.muted, 16));
+    + label(32, height - 20, `Updated · ${date(data.updatedAt)} UTC`, palette.muted, 16));
 }
 
 export function renderSteam(data, mobile = false) {
   const width = mobile ? 420 : 840;
   if (data.state !== 'ready') {
     const messages = {
-      pending: ['Waiting to connect', 'The gaming log is next.', 'Recent games and hours, once connected.'],
-      empty: ['No public recent activity', 'A quiet gaming log.', 'No recent games are publicly available.'],
-      unavailable: ['Temporarily unavailable', 'The gaming log is taking a break.', 'Recent activity could not be retrieved.'],
+      pending: ['Not connected', 'No Steam data yet.', ''],
+      empty: ['No public data', 'No recent games to show.', ''],
+      unavailable: ['Unavailable', 'Could not load Steam data.', ''],
     };
     const [status, heading, body] = messages[data.state];
     const height = mobile ? 280 : 236;
@@ -87,11 +90,11 @@ export function renderSteam(data, mobile = false) {
 <path d="M-26-20H26Q42-20 46-2L54 30Q54 48 38 38L20 22H-20L-38 38Q-54 48-54 30L-46-2Q-42-20-26-20Z"/>
 <path d="M-30-4V14M-39 5H-21"/><circle cx="24" cy="1" r="3"/><circle cx="34" cy="11" r="3"/></g>`;
     return frame(width, height, `Steam: ${status}`, gamepad
-      + label(32, 44, 'After hours', palette.text, 24, 600)
+      + label(32, 44, 'Steam', palette.text, 24, 600)
       + label(32, 84, status, palette.warning, 16, 500)
       + label(32, 132, heading, palette.text, 18, 500)
       + label(32, 164, body, palette.muted, mobile ? 16 : 18)
-      + label(32, height - 24, 'STEAM / LAST 14 DAYS', palette.accent, 16, 600));
+      + label(32, height - 24, 'LAST 14 DAYS', palette.accent, 16, 600));
   }
   const height = mobile ? 424 : 384;
   const rows = data.games.map((game, index) => {
@@ -101,9 +104,98 @@ export function renderSteam(data, mobile = false) {
       + label(32, y + 24, `${hours(game.totalMinutes)} lifetime`);
   }).join('');
   return frame(width, height, 'Steam recent games and hours played in the last two weeks',
-    label(32, 44, 'After hours', palette.text, 24, 600)
+    label(32, 44, 'Steam', palette.text, 24, 600)
     + label(32, 108, hours(data.totalMinutes), palette.text, 36, 600)
     + label(32, 140, 'Played in the last 14 days') + rule(164, width)
     + `<defs><clipPath id="game-names"><rect x="32" y="172" width="${width - 160}" height="180"/></clipPath></defs>` + rows
-    + label(32, height - 20, `Snapshot · ${date(data.updatedAt)} UTC`));
+    + label(32, height - 20, `Updated · ${date(data.updatedAt)} UTC`));
+}
+
+const cultureClip = (value, limit) => {
+  const chars = Array.from(String(value));
+  let width = 0;
+  let end = chars.length;
+  for (let index = 0; index < chars.length; index += 1) {
+    const charWidth = /[\u2e80-\u9fff\uac00-\ud7af]/u.test(chars[index]) ? 2 : 1;
+    if (width + charWidth > limit) {
+      end = index;
+      break;
+    }
+    width += charWidth;
+  }
+  return end < chars.length ? `${chars.slice(0, Math.max(0, end - 1)).join('')}…` : String(value);
+};
+
+function cultureArt(kind, x, y) {
+  if (kind === 'douban') {
+    return `<g transform="translate(${x} ${y})" fill="none" stroke="${palette.accent}" stroke-width="2" opacity=".5">
+<path d="M-28 28V-30H-12V28M-4 28V-38H12V28M20 28V-24H36V28"/>
+<path d="M-34 32H42" stroke="${palette.soft}"/></g>`;
+  }
+  return `<g transform="translate(${x} ${y})" fill="none" stroke="${palette.accent}" opacity=".5">
+<circle r="34" stroke-width="2"/><circle r="25" stroke-width="2"/><circle r="13" stroke-width="2"/><circle r="3" fill="${palette.soft}" stroke="none"/>
+<path d="M-3-3L20-20" stroke="${palette.soft}" stroke-width="2"/></g>`;
+}
+
+function cultureState(kind, state) {
+  const states = {
+    douban: {
+      pending: ['尚未接入豆瓣收藏', '书 · 电影 · 音乐'],
+      empty: ['暂无最近收藏', '没有可展示的收藏'],
+      unavailable: ['暂时无法获取豆瓣数据', ''],
+    },
+    qqMusic: {
+      pending: ['尚未接入听歌记录', '最近听过的歌曲'],
+      empty: ['暂无公开听歌记录', '没有可展示的歌曲'],
+      unavailable: ['暂时无法获取听歌记录', ''],
+    },
+  };
+  return states[kind][state] || states[kind].pending;
+}
+
+function culturePanel(kind, data, x, y, width) {
+  const isDouban = kind === 'douban';
+  const title = isDouban ? '豆瓣' : 'QQ 音乐';
+  const subtitle = isDouban ? '最近收藏' : '听歌历史';
+  const state = ['ready', 'empty', 'unavailable', 'pending'].includes(data?.state) ? data.state : 'pending';
+  const items = Array.isArray(data?.items) ? data.items.slice(0, 3) : [];
+  const ready = state === 'ready' && items.length > 0;
+  const updated = data?.updatedAt ? `更新 ${date(String(data.updatedAt))}` : '';
+  const header = label(x + 32, y + 40, title, palette.text, 24, 600)
+    + label(x + 32, y + 68, subtitle, palette.accent, 16, 500)
+    + label(x + width - 32, y + 40, updated, palette.muted, 16, 400, 'end');
+  if (!ready) {
+    const [heading, body] = cultureState(kind, state === 'ready' ? 'empty' : state);
+    return `<g><rect x="${x + .5}" y="${y + .5}" width="${width - 1}" height="295" rx="16" fill="${palette.surface}" stroke="${palette.border}"/>`
+      + header + (state === 'empty' || (kind === 'qqMusic' && state === 'pending')
+        ? cultureArt(kind, x + width - 76, y + 228) : '')
+      + label(x + 32, y + 132, heading, palette.text, 18, 600)
+      + label(x + 32, y + 160, body, palette.muted, 16)
+      + `</g>`;
+  }
+  const rows = items.map((item, index) => {
+    const itemTitle = String(item?.title ?? '');
+    const itemSubtitle = String(item?.subtitle ?? '');
+    const rowY = y + 116 + index * 64;
+    const visualTitle = cultureClip(itemTitle, width < 500 ? 29 : 34);
+    return `<g><title>${escapeXml(`${itemTitle}${itemSubtitle ? ` · ${itemSubtitle}` : ''}`)}</title>`
+      + label(x + 32, rowY, visualTitle, palette.text, 18, 600)
+      + label(x + 32, rowY + 23, cultureClip(itemSubtitle, width < 500 ? 35 : 42), palette.muted, 16)
+      + `</g>`;
+  }).join('');
+  return `<g><rect x="${x + .5}" y="${y + .5}" width="${width - 1}" height="295" rx="16" fill="${palette.surface}" stroke="${palette.border}"/>`
+    + header + rows + `</g>`;
+}
+
+export function renderCulture(data, mobile = false) {
+  const width = mobile ? 420 : 840;
+  const height = mobile ? 616 : 296;
+  const panelWidth = mobile ? 420 : 408;
+  const douban = data?.douban || {};
+  const qqMusic = data?.qqMusic || {};
+  const panels = mobile
+    ? culturePanel('douban', douban, 0, 0, panelWidth) + culturePanel('qqMusic', qqMusic, 0, 320, panelWidth)
+    : culturePanel('douban', douban, 0, 0, panelWidth) + culturePanel('qqMusic', qqMusic, 432, 0, panelWidth);
+  const title = '豆瓣最近收藏与 QQ 音乐听歌历史';
+  return canvas(width, height, title, `<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">${panels}</g>`);
 }

@@ -2,12 +2,22 @@
 
 ## 1. Atmosphere & identity
 
-A personal field log: code on the left, life beyond code underneath. Keep the
-existing Go developer identity and pronunciation `[i:viti]`, with no invented
-biography or statistics. The signature is a large lowercase wordmark beside a
-layered orbital illustration. This redesign follows the audit-first rules in
-`omo:frontend`'s `redesign-skill.md`: replace the unrelated card styles and two
-Spotify embeds with one visual language. The user authorized a free redesign.
+A personal GitHub profile with a short introduction and direct project links.
+Keep the existing Go developer identity and pronunciation `[i:viti]`, with no
+invented biography or statistics. The signature remains a large lowercase
+wordmark beside a layered orbital illustration. The lower section replaces the generated statistics disclosure with Douban
+collections and QQ Music listening history, using the existing palette.
+
+Copy uses literal labels: GitHub, Steam, recent updates, and playtime. Avoid
+slogans, numbered editorial chapters, descriptions of what a personal homepage
+is for, and personified API errors. Empty states say what data is missing.
+Technical setup and aggregation details belong in `docs/dynamic-content.md`.
+
+Reference profiles actually reviewed for their writing, not their biographies:
+[antfu](https://github.com/antfu/antfu),
+[DIYgod](https://github.com/DIYgod/DIYgod), and
+[jvns](https://github.com/jvns/jvns). Borrow the short factual introductions,
+named project links, and ordinary section labels; do not copy personal facts.
 
 ## 2. Color
 
@@ -40,8 +50,10 @@ Header height is 280px. The `<picture>` mobile breakpoint is 600px. GitHub
 cards are 448px high on desktop and 528px on mobile; Steam cards are 236/280px
 for unavailable states and 384/424px when populated. GitHub
 constrains images to the available width. Stack cards vertically rather than
-putting them in a table that overflows mobile. Native Markdown carries headings,
-introductory copy, links, and accessible summaries.
+putting them in a table that overflows mobile. Native Markdown carries headings, introductory copy and source links.
+The culture SVG contains two independent 408 × 296px cards separated by 24px
+on the 840px artboard; at the mobile breakpoint they stack as 420 × 296px
+cards on a 420 × 616px artboard. Each shows at most three entries.
 
 ## 5. Components
 
@@ -53,14 +65,18 @@ introductory copy, links, and accessible summaries.
   date or hours. Never interpret an upstream string as SVG markup.
 - **State panel:** ready, waiting for credentials, empty/private, and unavailable
   variants. Missing keys and fetch failures cannot appear as zero playing time.
-- **Native links/details:** GitHub controls keyboard, focus, hover, and disclosure.
-  Every destination is real; setup instructions stay in repository docs.
+- **Culture cards:** Douban recent collections and QQ Music listening history,
+  with ready, empty, unavailable and unconnected states. A shared card primitive
+  uses 24px headings, 18px entry titles, 16px metadata, 32px padding and 64px
+  row spacing. Book spines and record grooves identify the two empty panels.
+- **Native source links:** GitHub controls keyboard, focus and hover. Every
+  destination is real; setup instructions stay in repository docs.
 
 ## 6. Motion & interaction
 
 No SVG animation or script: GitHub serves README images in a restricted context.
-This also respects reduced motion. The only interactions are native links and
-an optional Markdown details disclosure for data provenance.
+This also respects reduced motion. The only interactions are native links. The homepage has no data-details
+disclosure; repeated statistics and collection methodology stay in docs.
 
 ## 7. Depth & surface
 
@@ -70,10 +86,9 @@ and tokens rather than third-party themed image services.
 
 ## 8. Accessibility constraints & platform limits
 
-Meaningful alt text on every image. Repeat dynamic values in generated Markdown
-inside a native details block for assistive technology and narrow displays.
-Long names truncate in cards but stay complete in the Markdown summary. Escape
-upstream text in both SVG and Markdown, including links. No credentials in SVG,
+Meaningful alt text on every image. Include the current card values in image alt text for assistive technology.
+Long names truncate visually but stay complete in alt text. Escape upstream
+text in both SVG and HTML attributes, including links. No credentials in SVG,
 README, committed snapshots or logs. Show UTC update dates and label GitHub
 activity as repository updates, not contribution counts. Do not claim live
 gaming presence from a scheduled snapshot.
@@ -81,5 +96,16 @@ gaming presence from a scheduled snapshot.
 GitHub owns page CSS, image scaling, caching, keyboard behavior and Lighthouse
 results; this repository ships a README rather than a web application. Validate
 the GitHub-compatible rendered Markdown at mobile, tablet and desktop widths,
-plus the generated state variants. Steam live verification awaits the keys the
-user explicitly plans to provide later.
+plus the generated state variants. Preserve existing Steam snapshots when generating only culture cards locally;
+valid Steam credentials already exist in the user’s remote environment. QQ
+listening history needs the user’s authorized source; do not invent records or
+substitute playlist contents for listening history.
+
+## 9. Current implementation plan
+
+1. Remove the generated statistics disclosure from both README and updater.
+2. Read Evity’s official Douban collection RSS; normalize public entries only.
+3. Render two responsive culture cards, with an honest QQ history pending state
+   until an authorized history source is configured. No new dependencies.
+4. Stage the new assets in CI, document configuration, and verify feed parsing,
+   escaping, source failures, regeneration and all three browser breakpoints.
