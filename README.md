@@ -20,7 +20,7 @@
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/steam-mobile.svg">
-  <img src="assets/steam.svg" width="840" alt="Steam 最近两周 27.6 小时。The Witcher 3: Wild Hunt — Remastered：两周 8.6 小时，累计 157.1 小时；Phantom Blade Zero：两周 7.6 小时，累计 7.6 小时；Street Fighter™ 6：两周 5.2 小时，累计 222.0 小时">
+  <img src="assets/steam.svg" width="840" alt="Steam 最近两周 27.4 小时。Phantom Blade Zero：两周 9.1 小时，累计 9.1 小时；The Witcher 3: Wild Hunt — Remastered：两周 8.5 小时，累计 157.1 小时；Street Fighter™ 6：两周 4.3 小时，累计 222.0 小时">
 </picture>
 
 <!-- PROFILE:START -->
