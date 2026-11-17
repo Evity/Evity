@@ -20,7 +20,7 @@
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/steam-mobile.svg">
-  <img src="assets/steam.svg" width="840" alt="Steam 最近两周 40.2 小时。Phantom Blade Zero：两周 38.8 小时，累计 49.8 小时；Street Fighter™ 6：两周 1.4 小时，累计 223.5 小时">
+  <img src="assets/steam.svg" width="840" alt="Steam 最近两周 40.7 小时。Phantom Blade Zero：两周 38.8 小时，累计 49.8 小时；Street Fighter™ 6：两周 1.9 小时，累计 224.0 小时">
 </picture>
 
 <!-- PROFILE:START -->
