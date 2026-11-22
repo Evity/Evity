@@ -20,7 +20,7 @@
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/steam-mobile.svg">
-  <img src="assets/steam.svg" width="840" alt="Steam 最近两周 33.0 小时。Phantom Blade Zero：两周 29.9 小时，累计 49.8 小时；Street Fighter™ 6：两周 1.8 小时，累计 225.3 小时；Grand Theft Auto V Enhanced：两周 1.1 小时，累计 2.4 小时">
+  <img src="assets/steam.svg" width="840" alt="Steam 最近两周 33.0 小时。Phantom Blade Zero：两周 28.4 小时，累计 49.8 小时；Street Fighter™ 6：两周 2.8 小时，累计 226.3 小时；Grand Theft Auto V Enhanced：两周 1.1 小时，累计 2.4 小时">
 </picture>
 
 <!-- PROFILE:START -->
