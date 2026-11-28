@@ -20,7 +20,7 @@
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/steam-mobile.svg">
-  <img src="assets/steam.svg" width="840" alt="Steam 最近两周 19.4 小时。Phantom Blade Zero：两周 13.6 小时，累计 49.8 小时；Street Fighter™ 6：两周 3.1 小时，累计 226.6 小时；雀魂麻将(MahjongSoul)：两周 1.5 小时，累计 386.4 小时">
+  <img src="assets/steam.svg" width="840" alt="Steam 最近两周 10.2 小时。Phantom Blade Zero：两周 3.6 小时，累计 49.8 小时；Street Fighter™ 6：两周 3.1 小时，累计 226.6 小时；雀魂麻将(MahjongSoul)：两周 2.1 小时，累计 387.0 小时">
 </picture>
 
 <!-- PROFILE:START -->
@@ -29,7 +29,7 @@
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/culture-mobile.svg">
-  <img src="assets/culture.svg" width="840" alt="豆瓣最近收藏：蜘蛛侠：崭新之日，看过 · 力荐 · 2026-11-19；疾速追杀，看过 · 力荐 · 2026-11-07；007：大破天幕杀机，看过 · 还行 · 2026-10-07。QQ 音乐听歌历史：尚未接入">
+  <img src="assets/culture.svg" width="840" alt="豆瓣最近收藏：泥面人，看过 · 力荐 · 2026-11-28；蜘蛛侠：崭新之日，看过 · 力荐 · 2026-11-19；疾速追杀，看过 · 力荐 · 2026-11-07。QQ 音乐听歌历史：尚未接入">
 </picture>
 
 [豆瓣主页](https://www.douban.com/people/Evity/)
